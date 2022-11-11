@@ -37,14 +37,14 @@
 
 Todos los endpoint /swapi tienen las mismas posibilidades que la api original de SWAPI, ejemplos
 
-/swapi/films 
-/swapi/people
-/swapi/planets
-/swapi/species
-/swapi/starships 
-/swapi/vehicles 
-/swapi/people?page=4
-/swapi/people?search=dar
-/swapi/people?page=4&format=wookiee 
-/swapi/people/1 
-/swapi/people/1&format=wookiee 
+- /swapi/films 
+- /swapi/people
+- /swapi/planets
+- /swapi/species
+- /swapi/starships 
+- /swapi/vehicles 
+- /swapi/people?page=4
+- /swapi/people?search=dar
+- /swapi/people?page=4&format=wookiee 
+- /swapi/people/1 
+- /swapi/people/1&format=wookiee 
