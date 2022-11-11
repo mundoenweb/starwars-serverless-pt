@@ -7,7 +7,7 @@
     "tsc": "tsc",
     "lint": "ts-standard",
     "test": "jest --verbose --watch",
-    "dev": "serverless offline",
+    "local": "serverless offline",
     "deploy": "serverless deploy"
   },
   "keywords": [],
