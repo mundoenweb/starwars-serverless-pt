@@ -3,7 +3,7 @@ import mysql from 'mysql2'
 
 export type errMySql = mysql.QueryError | null
 
-const { mysqlDB }: any = config
+const { mysqlDB } = config
 
 const connection: mysql.Connection = mysql.createConnection(mysqlDB)
 

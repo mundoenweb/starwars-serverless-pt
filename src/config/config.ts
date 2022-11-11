@@ -1,15 +1,13 @@
-import { config as configDotenv } from 'dotenv'
-configDotenv()
 
 const config = {
   mysqlDB: {
-    host: process.env.HOST,
-    port: process.env.PUERTODB,
-    user: process.env.USER,
-    password: process.env.DBPASSWORD,
-    database: process.env.DATABASE
+    host: process.env.HOST as string,
+    port: process.env.PUERTODB as any,
+    user: process.env.USER as string,
+    password: process.env.DBPASSWORD as string,
+    database: process.env.DATABASE as string
   },
-  SWAPI: process.env.SWAPI
+  SWAPI: process.env.SWAPI as string
 }
 
 export default config

@@ -6,7 +6,8 @@ provider:
   runtime: nodejs16.x
 
 plugins:
-  - serverless-plugin-typescript
+  # - serverless-plugin-typescript
+  # - serverless-dotenv-plugin
   - serverless-prune-plugin
   - serverless-offline
 
@@ -16,9 +17,43 @@ custom: # serverless-prune-plugin
     number: 1
 
 functions:
-  hello:
-    handler: src/index.hello
+
+# endpoints swapi
+  swapiResource:
+    handler: build/functions/swapiResource/index.swapiResource
     events:
       - httpApi:
-          path: /
+          path: /swapi/{resource}
           method: get
+  swapiResourceId:
+    handler: build/functions/swapiResourceId/index.swapiResourceId
+    events:
+      - httpApi:
+          path: /swapi/{resource}/{id}
+          method: get
+
+# endpoints starships
+  createStarships:
+    handler: build/functions/createStarships/index.createStarships
+    events:
+      - httpApi:
+          path: /starships
+          method: post
+  getStarships:
+    handler: build/functions/getStarships/index.getStarships
+    events:
+      - httpApi:
+          path: /starships
+          method: get
+  getStarship:
+    handler: build/functions/getStarship/index.getStarship
+    events:
+      - httpApi:
+          path: /starships/{id}
+          method: get
+  deleteStarship:
+    handler: build/functions/deleteStarship/index.deleteStarship
+    events:
+      - httpApi:
+          path: /starships/{id}
+          method: delete
