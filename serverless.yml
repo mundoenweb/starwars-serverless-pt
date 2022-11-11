@@ -3,7 +3,17 @@ frameworkVersion: '3'
 
 provider:
   name: aws
-  runtime: nodejs14.x
+  runtime: nodejs16.x
+
+plugins:
+  - serverless-plugin-typescript
+  - serverless-prune-plugin
+  - serverless-offline
+
+custom: # serverless-prune-plugin
+  prune:
+    automatic: true
+    number: 1
 
 functions:
   hello:
